@@ -3,6 +3,12 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$('.tmp').click(ReplaceWithAnagram);
+  	function ReplaceWithAnagram(event){
+  		event.preventDefault();
+  		let name = $(this).text()
+	  	$(this).text(anagrammedName(name))
+	  }
 })
 
 /*
@@ -44,3 +50,10 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+// $('.tmp').click(function () {
+// 	console.log(123);
+// 	document.getElementById('title').innerHtml = ''
+// })
+
+
+  	
